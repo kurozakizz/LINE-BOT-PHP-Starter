@@ -18,6 +18,10 @@ if (!is_null($events['events'])) {
 			
 			// Get text sent
 			$text = $event['message']['text'];
+
+			if ($text == 'register') {
+				$text = $events['source']['userId']
+			}
 			
 			// Get replyToken
 			$replyToken = $event['replyToken'];
@@ -25,7 +29,7 @@ if (!is_null($events['events'])) {
 			// Build message to reply back
 			$messages = [
 				'type' => 'text',
-				'text' => $text . $content
+				'text' => $text
 			];
 
 			// Make a POST Request to Messaging API to reply to sender
