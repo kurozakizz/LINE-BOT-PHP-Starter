@@ -5,12 +5,18 @@ $access_token = 'VSGQkinYYpJsnFpuYZaZMjukt3LCdCiFO9FXrg5dt52MxWKS2+DOOK95DAe79kD
 $url = 'https://api.line.me/v2/bot/message/push';
 $data = [
 	'to' => 'U2bfe4a2f9bbfdc8f03ff26d96fbf7675',
-	'messages' => array(
-		'type' => 'text',
-		'message' => 'สวัสดีฉนคือนายเมจิน'
-	)
+	'messages' => [
+		[0] => [
+			'type' => 'text',
+			'message' => 'สวัสดีฉนคือนายเมจิน'
+		]
+	],
 ];
 $post = json_encode($data);
+
+echo $post;
+echo "<br><hr>";
+
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
 $ch = curl_init($url);
