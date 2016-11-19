@@ -17,8 +17,9 @@ $data = [
 ];
 $post = json_encode($data);
 
-echo $post;
-echo "<br><hr>";
+//debug
+//echo $post;
+//echo "<br><hr>";
 
 $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
 
