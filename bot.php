@@ -20,7 +20,7 @@ if (!is_null($events['events'])) {
 			$text = $event['message']['text'];
 
 			if ($text == 'register') {
-				$text = $events['source']['userId']
+				$text = $events['source']['userId'];
 			}
 			
 			// Get replyToken
